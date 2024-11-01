@@ -49,13 +49,13 @@ class BufferedWriter():
             self.flush_file(file_path)
 
     def write_line(self, file_path: str, line: str):
-        """Add a line to the buffer
+        """
+        Add a line to the buffer
 
         Args:
             file_path (str):
             line (str):
         """
-
         try:
             self.buffer[file_path].append(line)
         except:
