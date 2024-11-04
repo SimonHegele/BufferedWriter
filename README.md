@@ -3,8 +3,10 @@ Simple buffered file writer for dealing with large amount of data and files effi
 
 For each file out of an arbitrary large amount of files the BufferedWriter stores a
 list of lines. Only when they exceed a predefined limit their contents are 
-collectively written to the filesystem. By preventing repeated opening and closing of
-files the BufferedWriter reduces computation time.
+collectively written to the filesystem. As each file is opened and close less time 
+the BufferedWriter operates much faster. Also, accessing the same file twice in very
+short period of time can cause Errors. This can also be prevented by using the 
+BufferedWriter.
 
 ## Speed test 
 
