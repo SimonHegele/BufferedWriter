@@ -18,12 +18,14 @@ The bufferedWrite will wait for 1/1000 of a second and try again.
 
 ## Usage
 
-`with BufferedWriter(out_dir=out_dir, lines_per_file=i) as writer:
+As context manager:
+
+`
+with BufferedWriter(out_dir=out_dir, lines_per_file=i) as writer:
 
         for line in lines:
-            writer.write_line(f"file_{str(line%files_to_write)}", str(line))`
-
-Simple buffered file writer for dealing with large amount of data and files efficiently.
+            writer.write_line(f"file_{str(line%files_to_write)}", str(line))
+`
 
 ## Speed test 
 
