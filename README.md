@@ -20,11 +20,10 @@ The bufferedWrite will wait for 1/1000 of a second and try again.
 
 As context manager:
 
-`
-        with BufferedWriter(out_dir=out_dir, lines_per_file=i) as writer:
-                for line in lines:
-                    writer.write_line(f"file_{str(line%files_to_write)}", str(line))
-`
+```python
+with BufferedWriter(out_dir=out_dir, lines_per_file=i) as writer:
+        for line in lines:
+                writer.write_line(f"file_{str(line%files_to_write)}", str(line))
 
 ## Speed test 
 
