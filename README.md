@@ -24,7 +24,8 @@ As context manager:
 with BufferedWriter(out_dir=out_dir, lines_per_file=i) as writer:
         for line in lines:
                 writer.write_line(f"file_{str(line%files_to_write)}", str(line))
-´´´
+```
+
 ## Speed test 
 
 I generated a list of 100,000 random integer numbers. Each of these numbers should be
