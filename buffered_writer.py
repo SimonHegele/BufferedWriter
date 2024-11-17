@@ -41,7 +41,7 @@ class BufferedWriter():
                     file.write(line+"\n")
             self.buffer[file_path] = []
         except:
-            sleep(0.00001)
+            sleep(1/1000)
             self.flush(file_path)
 
     def flush(self):
