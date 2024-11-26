@@ -14,7 +14,7 @@ its contents are written to the file collectively.
 
 The BufferedWriter is save to use in combination with multiprocessing.
 Conflicts from different BufferedWriters trying to access files simulatanously are rare.
-The bufferedWrite will wait for 1/1000 of a second and try again.
+The bufferedWriter will wait for 1/1000 of a second and try again.
 
 ## Usage
 
