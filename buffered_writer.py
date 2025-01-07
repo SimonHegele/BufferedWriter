@@ -35,14 +35,11 @@ class BufferedWriter():
         Args:
             file_path (str):
         """
-        try:
-            with open(path.join(self.out_dir, file_path), "a") as file:
-                for line in self.buffer[file_path]:
-                    file.write(line+"\n")
-            self.buffer[file_path] = []
-        except:
-            sleep(1/1000)
-            self.flush(file_path)
+        
+        with open(path.join(self.out_dir, file_path), "a") as file:
+            for line in self.buffer[file_path]:
+                file.write(line+"\n")
+        self.buffer[file_path] = []
 
     def flush(self):
         """
