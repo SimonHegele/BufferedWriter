@@ -12,10 +12,6 @@ In a dictionary it stores a list of lines for each file. New lines for the files
 to the respective lists first. Only when the length of a files list exceeds a certain limit
 its contents are written to the file collectively.
 
-The BufferedWriter is save to use in combination with multiprocessing.
-Conflicts from different BufferedWriters trying to access files simulatanously are rare.
-The bufferedWriter will wait for 1/1000 of a second and try again.
-
 ## Usage
 
 As context manager:
